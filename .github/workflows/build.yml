@@ -1,11 +1,11 @@
 on: push
-  jobs:
-    build-node:
-      runs-on: ubuntu-latest
-      container: node-16
-      steps:
-        - run: node --version
-        - run: npm --version
-        - users: actions/checkout@v3
-        - run: node app.js
-        
+jobs:
+  build-node:
+    runs-on: ubuntu-latest
+    container: node-16
+    steps:
+      - run: node --version
+      - run: npm --version
+      - users: actions/checkout@v3
+      - run: node app.js
+      
