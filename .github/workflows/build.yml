@@ -1,6 +1,6 @@
 on: push
   jobs:
-    build mode:
+    build-mode:
       runs-on: ubuntu-latest
       container: node-16
       steps:
