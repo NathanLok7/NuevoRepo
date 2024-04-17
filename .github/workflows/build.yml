@@ -10,6 +10,7 @@
 #      - uses: actions/checkout@v3
 #      - run: node app.js
 
+on: push
 jobs:
   py-app:
     runs-on: ubuntu-latest
