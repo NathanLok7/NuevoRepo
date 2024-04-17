@@ -1,11 +1,20 @@
-on: push
+#
+#on: push
+#jobs:
+#  build-node:
+#    runs-on: ubuntu-latest
+#    container: node:16
+#    steps:
+#      - run: node --version
+#      - run: npm --version
+#      - uses: actions/checkout@v3
+#      - run: node app.js
+
 jobs:
-  build-node:
+  py-app:
     runs-on: ubuntu-latest
-    container: node:16
+    container: python:3.8
     steps:
-      - run: node --version
-      - run: npm --version
-      - uses: actions/checkout@v3
-      - run: node app.js
-      
+      - uses: actions/checkout@v4
+      - name: Run tests
+        run: python3 hello.py
